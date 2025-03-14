@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "powerofunivers",
+	"version": "${version}",
+	"name": "Power of Univers",
+	"description": "Univers of Power is a Fabric mod that introduces powerful abilities and high-quality animations to enhance your Minecraft experience. Master unique skills, such as stopping or slowing down time within a defined area, and unleash devastating attacks with beautifully animated weapons like katanas. Whether you're seeking strategic combat or immersive visuals, this mod brings dynamic gameplay mechanics and fluid action to your world.\n\n",
+	"authors": [
+		"Honyzey"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Honyzey/power-of-univers-1.21"
+	},
+	"license": "MIT",
+	"icon": "assets/powerofunivers/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"honyzey.powerofunivers.PowerOfUnivers"
+		],
+		"fabric-datagen": [
+			"honyzey.powerofunivers.PowerOfUniversDataGenerator"
+		],
+		"client": [
+			"honyzey.powerofunivers.PowerOfUniversClient"
+		]
+	},
+	"mixins": [
+		"powerofunivers.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
