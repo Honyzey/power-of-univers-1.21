@@ -1,6 +1,7 @@
 package honyzey.powerofunivers;
 
 import honyzey.powerofunivers.block.ModBlocks;
+import honyzey.powerofunivers.item.ModItemGroups;
 import honyzey.powerofunivers.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,6 +18,8 @@ public class PowerOfUnivers implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
+
 		ModItems.registerItems();
 		ModBlocks.registerModBlocks();
 	}
