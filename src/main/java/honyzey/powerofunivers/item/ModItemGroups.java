@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
 
     public static final ItemGroup POWER_OF_UNIVERS_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(PowerOfUnivers.MOD_ID, "power_of_univers_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.TEST_BLOCK))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.DEEPSLATE_ORE_OF_UNIVERS))
                     .displayName(Text.translatable("itemgroup.powerofunivers.power_of_univers_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_TEST);
