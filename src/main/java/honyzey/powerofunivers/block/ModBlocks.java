@@ -21,6 +21,36 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
     ));
 
+
+
+    public static final Block ORE_OF_UNIVERS = registerBlock("ore_of_univers", new Block(AbstractBlock.Settings
+            .create()
+            .strength(4f)
+            .requiresTool()
+            .sounds(BlockSoundGroup.STONE)
+    ));
+
+    public static final Block DEEPSLATE_ORE_OF_UNIVERS = registerBlock("deepslate_ore_of_univers", new Block(AbstractBlock.Settings
+            .create()
+            .strength(4f)
+            .requiresTool()
+            .sounds(BlockSoundGroup.DEEPSLATE)
+    ));
+
+    public static final Block NETHER_ORE_OF_UNIVERS = registerBlock("nether_ore_of_univers", new Block(AbstractBlock.Settings
+            .create()
+            .strength(4f)
+            .requiresTool()
+            .sounds(BlockSoundGroup.NETHER_ORE)
+    ));
+
+    public static final Block END_ORE_OF_UNIVERS = registerBlock("end_ore_of_univers", new Block(AbstractBlock.Settings
+            .create()
+            .strength(4f)
+            .requiresTool()
+            .sounds(BlockSoundGroup.STONE)
+    ));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(PowerOfUnivers.MOD_ID, name), block);
@@ -36,6 +66,10 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register( fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(ModBlocks.TEST_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.ORE_OF_UNIVERS);
+            fabricItemGroupEntries.add(ModBlocks.DEEPSLATE_ORE_OF_UNIVERS);
+            fabricItemGroupEntries.add(ModBlocks.NETHER_ORE_OF_UNIVERS);
+            fabricItemGroupEntries.add(ModBlocks.END_ORE_OF_UNIVERS);
         });
     }
 }

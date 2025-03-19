@@ -2,6 +2,10 @@
   "item.powerofunivers.test_test": "Test Item",
 
   "block.powerofunivers.test_block": "Test Block",
+  "block.powerofunivers.ore_of_univers": "Ore of Univers",
+  "block.powerofunivers.deepslate_ore_of_univers": "Deepslate Ore of Univers",
+  "block.powerofunivers.nether_ore_of_univers": "Nether Ore of Univers",
+  "block.powerofunivers.end_ore_of_univers": "End Ore of Univers",
 
   "itemgroup.powerofunivers.power_of_univers_items": "Power Of Univers"
 }

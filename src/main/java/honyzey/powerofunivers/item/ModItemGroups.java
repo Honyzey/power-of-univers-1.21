@@ -18,6 +18,10 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_TEST);
                         entries.add(ModBlocks.TEST_BLOCK);
+                        entries.add(ModBlocks.ORE_OF_UNIVERS);
+                        entries.add(ModBlocks.DEEPSLATE_ORE_OF_UNIVERS);
+                        entries.add(ModBlocks.NETHER_ORE_OF_UNIVERS);
+                        entries.add(ModBlocks.END_ORE_OF_UNIVERS);
                     }).build());
 
     public static void registerItemGroups() {
