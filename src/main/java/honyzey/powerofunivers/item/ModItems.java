@@ -12,6 +12,8 @@ public class ModItems {
 
     public static final Item TEST_TEST = registerItem("test_test", new Item(new Item.Settings()));
 
+    public static final Item RAW_UNIVERS = registerItem("raw_univers", new Item(new Item.Settings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(PowerOfUnivers.MOD_ID, name), item);
     }
@@ -22,6 +24,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(TEST_TEST);
+            fabricItemGroupEntries.add(RAW_UNIVERS);
         });
     }
 }

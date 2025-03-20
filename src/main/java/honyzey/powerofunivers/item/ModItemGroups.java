@@ -16,12 +16,16 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.DEEPSLATE_ORE_OF_UNIVERS))
                     .displayName(Text.translatable("itemgroup.powerofunivers.power_of_univers_items"))
                     .entries((displayContext, entries) -> {
+
                         entries.add(ModItems.TEST_TEST);
+                        entries.add(ModItems.RAW_UNIVERS);
+
                         entries.add(ModBlocks.TEST_BLOCK);
                         entries.add(ModBlocks.ORE_OF_UNIVERS);
                         entries.add(ModBlocks.DEEPSLATE_ORE_OF_UNIVERS);
                         entries.add(ModBlocks.NETHER_ORE_OF_UNIVERS);
                         entries.add(ModBlocks.END_ORE_OF_UNIVERS);
+
                     }).build());
 
     public static void registerItemGroups() {

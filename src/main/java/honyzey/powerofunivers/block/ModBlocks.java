@@ -4,6 +4,7 @@ import honyzey.powerofunivers.PowerOfUnivers;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -11,6 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
@@ -23,33 +25,36 @@ public class ModBlocks {
 
 
 
-    public static final Block ORE_OF_UNIVERS = registerBlock("ore_of_univers", new Block(AbstractBlock.Settings
+    public static final Block ORE_OF_UNIVERS = registerBlock("ore_of_univers", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings
             .create()
-            .strength(4f)
+            .strength(3f)
             .requiresTool()
             .sounds(BlockSoundGroup.STONE)
-    ));
+            )
+    );
 
-    public static final Block DEEPSLATE_ORE_OF_UNIVERS = registerBlock("deepslate_ore_of_univers", new Block(AbstractBlock.Settings
+    public static final Block DEEPSLATE_ORE_OF_UNIVERS = registerBlock("deepslate_ore_of_univers", new ExperienceDroppingBlock(UniformIntProvider.create(3, 6), AbstractBlock.Settings
             .create()
             .strength(4f)
             .requiresTool()
             .sounds(BlockSoundGroup.DEEPSLATE)
     ));
 
-    public static final Block NETHER_ORE_OF_UNIVERS = registerBlock("nether_ore_of_univers", new Block(AbstractBlock.Settings
+    public static final Block NETHER_ORE_OF_UNIVERS = registerBlock("nether_ore_of_univers", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings
             .create()
             .strength(4f)
             .requiresTool()
             .sounds(BlockSoundGroup.NETHER_ORE)
     ));
 
-    public static final Block END_ORE_OF_UNIVERS = registerBlock("end_ore_of_univers", new Block(AbstractBlock.Settings
+    public static final Block END_ORE_OF_UNIVERS = registerBlock("end_ore_of_univers", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings
             .create()
             .strength(4f)
             .requiresTool()
             .sounds(BlockSoundGroup.STONE)
     ));
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
