@@ -49,7 +49,7 @@ public class ModBlocks {
 
     public static final Block END_ORE_OF_UNIVERS = registerBlock("end_ore_of_univers", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings
             .create()
-            .strength(4f)
+            .strength(5f)
             .requiresTool()
             .sounds(BlockSoundGroup.STONE)
     ));
