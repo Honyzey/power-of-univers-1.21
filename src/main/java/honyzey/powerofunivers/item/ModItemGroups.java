@@ -18,7 +18,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
 
                         entries.add(ModItems.TEST_TEST);
-                        entries.add(ModItems.RAW_UNIVERS);
+                        entries.add(ModItems.RAW_OF_UNIVERS);
+                        entries.add(ModItems.INGOT_OF_UNIVERS);
 
                         entries.add(ModBlocks.TEST_BLOCK);
                         entries.add(ModBlocks.ORE_OF_UNIVERS);
