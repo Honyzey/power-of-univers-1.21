@@ -1,12 +1,14 @@
 package honyzey.powerofunivers;
 
-import honyzey.powerofunivers.block.ModBlocks;
-import honyzey.powerofunivers.item.ModItemGroups;
-import honyzey.powerofunivers.item.ModItems;
+import honyzey.powerofunivers.item.special.PowerOfTime;
+import honyzey.powerofunivers.registry.ModRegistry;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.server.world.ServerWorld;
 
 public class PowerOfUnivers implements ModInitializer {
 	public static final String MOD_ID = "powerofunivers";
@@ -18,9 +20,12 @@ public class PowerOfUnivers implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerItemGroups();
+		ModRegistry.registerAll();
 
-		ModItems.registerItems();
-		ModBlocks.registerModBlocks();
+		ServerTickEvents.END_SERVER_TICK.register(server -> {
+			for (ServerWorld world : server.getWorlds()) {
+				PowerOfTime.tickTimeStopZones(world);
+			}
+		});
 	}
 }
